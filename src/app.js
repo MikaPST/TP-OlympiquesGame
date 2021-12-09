@@ -9,6 +9,9 @@ const sportRouter = require('./routers/sport.router');
 app.use('/api', sportRouter);
 // ... A COMPLETER ...
 
+//TODO get....
+
+
 // Connexion à la base de données
 require('./database/mongodb');
 
