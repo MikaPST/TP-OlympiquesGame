@@ -1,5 +1,5 @@
 module.exports = {
     database: {
-        host: "mongodb+srv://data:data@cluster0.7iatl.mongodb.net/test?retryWrites=true&w=majority"
+        host: "mongodb+srv://user_bdd:Tester123456@cluster0.d0v50.mongodb.net/OlympiqueGame?retryWrites=true&w=majority"
     }
 }
