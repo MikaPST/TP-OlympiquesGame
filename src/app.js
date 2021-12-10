@@ -12,6 +12,8 @@ app.set('views', path.join(__dirname, 'views'));
 // Ajouter les routes via les routers
 const sportRouter = require('./routers/sport.router');
 app.use('/api', sportRouter);
+const athleteRouter = require('./routers/athlete.router');
+app.use('/api',athleteRouter);
 // ... A COMPLETER ...
 
 // Connexion à la base de données
