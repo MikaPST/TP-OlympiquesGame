@@ -1,8 +1,12 @@
 const express = require('express');
+const path = require('path');
 
 const app = express();
 
 app.use(express.json());
+
+app.set('view engine', 'hbs');
+app.set('views', path.join(__dirname, 'views'));
 
 // Ajouter les routes via les routers
 const sportRouter = require('./routers/sport.router');

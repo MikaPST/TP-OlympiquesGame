@@ -7,7 +7,8 @@ const SportController = require('../controllers/sport.controller');
 const sportController = new SportController();
 
 router.get('/sports/', async (req, res) => {
-    sportController.list(req, res);
+    // let sport = sportController.list(req, res);
+    res.render('index');//TODO modif
 });
 
 router.post('/sports/', async (req, res) => {
