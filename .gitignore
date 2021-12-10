@@ -6,7 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
-# Fichier de configuration de connexion à la bdd
+# Fichier de configuration de la connexion à la bdd
 /src/config.js
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
