@@ -73,9 +73,11 @@
   <main class="flex-shrink-0" style="padding-top: 10em; padding-bottom: 10em;">
     <div class="container">
        {{!-- Mettre les ressources ici --}}
-<h1>Ajout d'un Sport</h1>
 
-<form>
+<div class="row align-items-center">
+    <div class="col">
+      <h1>Ajout d'un Sport</h1>
+      <form>
   <div class="form-row">
     <div class="col-md-4 mb-3">
       <label for="validationDefault01">Nom du Sport :</label>
@@ -92,6 +94,35 @@
   </div>
   <button class="btn btn-primary" type="submit">Envoyer</button>
 </form>
+    </div>
+    <div class="col">
+      <h1>Liste des Sports</h1>
+      <form>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit" id="boutonGet" onclick="getListeSport()">Voir la Liste</button>
+    </div>
+  </div>
+
+{{!-- <form>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationDefault01">Nom du Sport :</label>
+      <input type="text" class="form-control" id="nomGame" placeholder="Mangeur de Chocolat" required>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationDefault02">Catégorie du Sport :</label>
+      <input type="text" class="form-control" id="validationDefault02" placeholder="ex : Sport Individuel" required>
+    </div>
+  </div>
+  <div class="form-row">
+  </div>
+  <div class="form-group">
+  </div>
+  <button class="btn btn-primary" type="submit">Envoyer</button>
+</form> --}}
 
 
     </div>
