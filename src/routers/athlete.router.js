@@ -9,8 +9,8 @@ const Athlete = require('../models/athlete.model');
 const athleteController = new AthleteController();
 
 router.get('/athletes/', async (req, res) => {
-    athleteController.list(req,res);
-    // res.render('index'); désactivé pour le moment voir comment faire pour render que si depuis browser
+    //athleteController.list(req,res);
+    res.render('index'); //désactivé pour le moment voir comment faire pour render que si depuis browser
 });
 
 router.post('/athletes/', async (req, res) => {
