@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Hugo 0.88.1">
-  <title>Sticky Footer Navbar Template · Bootstrap v5.1</title>
+  <title>Olympique Game</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sticky-footer-navbar/">
 
@@ -72,211 +72,201 @@
   <!-- Begin page content -->
   <main class="flex-shrink-0" style="padding-top: 10em; padding-bottom: 10em;">
     <div class="container">
-       {{!-- Mettre les ressources ici --}}
+      {{!-- Mettre les ressources ici --}}
 
-<div class="row align-items-center">
-    <div class="col">
-      <h1>Ajout d'un Sport</h1>
-      <form>
-  <div class="form-row">
-    <div class="col-md-4 mb-3">
-      <label for="validationDefault01">Nom du Sport :</label>
-      <input type="text" class="form-control" id="nomGame" placeholder="Mangeur de Chocolat" required>
-    </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationDefault02">Catégorie du Sport :</label>
-      <input type="text" class="form-control" id="validationDefault02" placeholder="ex : Sport Individuel" required>
-    </div>
-  </div>
-  <div class="form-row">
-  </div>
-  <div class="form-group">
-  </div>
-  <button class="btn btn-primary" type="submit">Envoyer</button>
-</form>
-    </div>
-    <div class="col">
-      <h1>Liste des Sports</h1>
-      <form>
-  <div class="form-row">
-    <div class="col-md-4 mb-3">
-    </div>
-  </div>
-  <button class="btn btn-primary" type="submit" id="boutonGet" onclick="getListeSport()">Voir la Liste</button>
-    </div>
-  </div>
+      <div class="row align-items-center">
+        <div class="col">
+          <h1>Ajout d'un Sport</h1>
+          <form action="/post-feedback" method="POST">
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="validationDefault01">Nom du Sport :</label>
+                <input type="text" class="form-control" id="name" placeholder="Mangeur de Chocolat" required>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="validationDefault02">Catégorie du Sport :</label>
+                <input type="text" class="form-control" id="category" placeholder="ex : Sport Individuel" required>
+              </div>
+            </div>
+            <div class="form-row">
+            </div>
+            <div class="form-group">
+            </div>
+            <button class="btn btn-primary" type="submit">Envoyer</button>
+          </form>
+        </div>
+        <div class="col">
+          <h1>Liste des Sports</h1>
+          <form>
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit" id="boutonGet" onclick="getListeSport()">Voir la
+              Liste</button>
+        </div>
+      </div>
 
-{{!-- <form>
-  <div class="form-row">
-    <div class="col-md-4 mb-3">
-      <label for="validationDefault01">Nom du Sport :</label>
-      <input type="text" class="form-control" id="nomGame" placeholder="Mangeur de Chocolat" required>
-    </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationDefault02">Catégorie du Sport :</label>
-      <input type="text" class="form-control" id="validationDefault02" placeholder="ex : Sport Individuel" required>
-    </div>
-  </div>
-  <div class="form-row">
-  </div>
-  <div class="form-group">
-  </div>
-  <button class="btn btn-primary" type="submit">Envoyer</button>
-</form> --}}
+      {{!-- <form>
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="validationDefault01">Nom du Sport :</label>
+            <input type="text" class="form-control" id="nomGame" placeholder="Mangeur de Chocolat" required>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationDefault02">Catégorie du Sport :</label>
+            <input type="text" class="form-control" id="validationDefault02" placeholder="ex : Sport Individuel"
+              required>
+          </div>
+        </div>
+        <div class="form-row">
+        </div>
+        <div class="form-group">
+        </div>
+        <button class="btn btn-primary" type="submit">Envoyer</button>
+      </form> --}}
 
 
     </div>
   </main>
 
- <!-- Footer -->
-<footer class="bg-dark text-center text-white">
-  <!-- Grid container -->
-  <div class="container p-4">
-    <!-- Section: Social media -->
-    <section class="mb-4">
-      <!-- Facebook -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-facebook-f"></i
-      ></a>
+  <!-- Footer -->
+  <footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
 
-      <!-- Twitter -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-twitter"></i
-      ></a>
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
 
-      <!-- Google -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-google"></i
-      ></a>
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
 
-      <!-- Instagram -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-instagram"></i
-      ></a>
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
 
-      <!-- Linkedin -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-linkedin-in"></i
-      ></a>
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
 
-      <!-- Github -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-github"></i
-      ></a>
-    </section>
-    <!-- Section: Social media -->
+        <!-- Github -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+      </section>
+      <!-- Section: Social media -->
 
-    <!-- Section: Text -->
-    <section class="mb-4">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-        eum harum corrupti dicta, aliquam sequi voluptate quas.
-      </p>
-    </section>
-    <!-- Section: Text -->
+      <!-- Section: Text -->
+      <section class="mb-4">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+          repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+          eum harum corrupti dicta, aliquam sequi voluptate quas.
+        </p>
+      </section>
+      <!-- Section: Text -->
 
-    <!-- Section: Links -->
-    <section class="">
-      <!--Grid row-->
-      <div class="row">
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
 
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#!" class="text-white">Link 1</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 2</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 4</a>
-            </li>
-          </ul>
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
         </div>
-        <!--Grid column-->
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
 
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
-
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#!" class="text-white">Link 1</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 2</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 4</a>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
-
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#!" class="text-white">Link 1</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 2</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 4</a>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
-
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#!" class="text-white">Link 1</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 2</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 4</a>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
-      </div>
-      <!--Grid row-->
-    </section>
-    <!-- Section: Links -->
-  </div>
-  <!-- Grid container -->
-
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2021 Copyright - Timothée & Michaël
-  </div>
-  <!-- Copyright -->
-</footer>
-<!-- Footer -->
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright - Timothée & Michaël
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
 
 
   <script src="/js/bootstrap.bundle.min.js"></script>
