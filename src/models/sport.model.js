@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const sportSchema = new mongoose.Schema({
+    _id: String,
     name: String,
     category: String,
     athletes : [{ type: Schema.Types.ObjectId, ref: 'Athlete' }]

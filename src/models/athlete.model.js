@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 // const Schema = mongoose.Schema;
 
 const athleteSchema = new mongoose.Schema({
-    // _id: mongoose.ObjectId,
+    _id: String,
     firstName: String,
     lastName: String,
     gender: String, // (FEMALE ou MALE)
