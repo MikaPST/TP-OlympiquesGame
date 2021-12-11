@@ -10,7 +10,7 @@ const athleteController = new AthleteController();
 
 router.get('/athletes/', async (req, res) => {
     //athleteController.list(req,res);
-    res.render('index'); //désactivé pour le moment voir comment faire pour render que si depuis browser
+    res.render('athlete'); //désactivé pour le moment voir comment faire pour render que si depuis browser
 });
 
 router.get('/athletes/:athleteId/sport', async (req, res) => {
