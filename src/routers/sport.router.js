@@ -20,7 +20,8 @@ router.post('/sports/', async (req, res) => {
 
 //Consulter les athlètes d'un sport : GET /api/sports/{sportId}/athletes
 router.get('/sports/:sportId/athletes', async (req, res) => {
-    res.send(req.params.sportId);
+    sportController.athleteList(req,res);
+    // res.send(req.params.sportId);
     //sportController.list(req,res);
     //res.render('index'); //désactivé pour le moment voir comment faire pour render que si depuis browser
 });

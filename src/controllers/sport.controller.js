@@ -13,6 +13,14 @@ class SportController {
         });
     }
 
+    async athleteList(req, res) {
+        const sport = await Sport.findById(req.params.sportId);
+        res.json({
+            count: sport.athletes.length,
+            athletes: sport.athletes
+        })
+    }
+
     // ... A COMPLETER ...
 }
 
