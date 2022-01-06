@@ -79,12 +79,22 @@
           <h1>Ajout d'un Athlete</h1>
           <form action="/api/athletes" method="POST">
             <div class="form-row">
-              <div class="col-md-4 mb-3">
+              <div class="col-md-4 mb-2">
                 <label for="validationDefault01">Nom de l'Athlete :</label>
                 <input type="text" class="form-control" name="name" placeholder="Arthur" required>
               </div>
+              <div class="col-md-4 mb-2">
+                <label for="validationDefault02">Prénom de l'Athlete :</label>
+                <input type="text" class="form-control" name="firstname" placeholder="DUPOND" required>
+              </div>
+              <div class="col-md-5 mb-3">
+                <input type="radio" id="homme" name="genre" value="homme" checked>
+                <label style="margin-right: 30px" for="huey">Homme</label>
+                <input type="radio" id="femme" name="genre" value="femme">
+                <label for="dewey">Femme</label>
+              </div>
               <div class="col-md-4 mb-3">
-                <label for="validationDefault02">Catégorie du Sport :</label>
+                <label for="validationDefault03">Catégorie du Sport :</label>
                 <input type="text" class="form-control" name="category" placeholder="ex : Sport Individuel" required>
               </div>
             </div>
@@ -136,10 +146,10 @@
     <div class="container p-4">
       <!-- Section: Social media -->
       <section class="mb-4">
-        
+
         <!-- Github -->
         <a class="m-1" href="https://github.com/MikaPST/TP-OlympiquesGame.git">
-        <img src="https://imglink.io/ib/Dxc8h8SGHQ.png"  style="max-height : 80px" alt="Logo Github">
+          <img src="https://imglink.io/ib/Dxc8h8SGHQ.png" style="max-height : 80px" alt="Logo Github">
         </a>
 
       </section>
