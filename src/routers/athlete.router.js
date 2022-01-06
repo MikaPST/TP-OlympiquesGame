@@ -24,10 +24,10 @@ router.post('/athletes/', async (req, res) => {
     const body = req.body;
    
     const athlete = new Athlete({
-        firstName: body.name,
-        lastName: 'test',
-        gender: 'MALE', // (FEMALE ou MALE)
-        country: 'Ouzbekistan'
+        firstName: body.firstname,
+        lastName: body.name,
+        gender: body.genre,
+        country: body.country
     });
     athlete.save().then(() => res.send(athlete));
 });
