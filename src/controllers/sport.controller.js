@@ -6,11 +6,12 @@ class SportController {
      */
     async list(req, res) {
         const sports = await Sport.find();
-
-        res.json({
-            count: sports.length,
-            sports: sports
-        });
+        console.log(sports);
+        res.render('sport',{list:sports});
+        // res.json({
+        //     count: sports.length,
+        //     sports: sports
+        // });
     }
 
     async athleteList(req, res) {
