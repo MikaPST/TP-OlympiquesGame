@@ -74,8 +74,8 @@
     <div class="container">
       {{!-- Mettre les ressources ici --}}
 
-      <div class="row align-items-center">
-        <div class="col">
+      <div class="row justify-content-center">
+        <div class="col-5">
           <h1>Ajout d'un Sport</h1>
           <form action="/api/sports" method="POST">
             <div class="form-row">
@@ -95,20 +95,32 @@
             <button class="btn btn-primary" type="submit">Envoyer</button>
           </form>
         </div>
+      </div>
+      <div class="row">
         <div class="col">
           <div class="row my-2">
             <h1>Liste des Sports</h1>
-            <form action="/api/sports" method="GET">
-              <div class="form-row">
-                <div class="col-md-4 mb-3">
+            {{#each list}}
+            <div class="col-6 my-2">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">{{name}}</h5>
+                  <p class="card-text">{{category}} {{_id}} </p>
+                  <a href="#" class="btn btn-primary">Liste des athlètes</a>
+                  <a href="#" class="btn btn-primary">Ajouter un athlète</a>
                 </div>
               </div>
-              <button class="btn btn-primary" type="submit">Voir la
-                Liste</button>
-            </form>
+            </div>
+            {{/each}}
           </div>
-
         </div>
+      </div>
+        
+      
+
+      <div class="row">
+
+
       </div>
 
       {{!-- <form>
