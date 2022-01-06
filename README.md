@@ -24,7 +24,7 @@ git clone https://github.com/MikaPST/TP-OlympiquesGame.git ./myproject
 
 ### Télécharger et Installation Manuel
 
-1.  Télécharger le référentiel
+1.  Télécharger l'archive
 2.  Décompressez dans le répertoire souhaité
 
 ### Installer les dépendances npm après l'installation (Git ou téléchargement manuel)
@@ -45,9 +45,9 @@ npm install
 4. Modifiez les valeurs du fichier dans votre environnement. Commentaires utiles ajoutés au fichier `config.js.exemple` pour comprendre les constantes.
 
 
-## How to run
+## Comment Lancer
 
-### Running API server locally
+### Exécution du serveur API localement
 
 ```bash
 npm start
