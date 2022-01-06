@@ -56,8 +56,11 @@ npm start
 Vous saurez que le serveur est en cours d'exécution en vérifiant la sortie de la commande `npm start`
 
 ```bash
-Connected to mongodb:YOUR_DB_CONNECTION_STRING
-App is running ...
+Serveur lancé sur le port 3000 🚀
+Connected to the database! ✅
+
+`Cliquez sur le lien ci-dessous`
+http://localhost:3000/api/sports/
 
 Press CTRL + C to stop the process.
 ```

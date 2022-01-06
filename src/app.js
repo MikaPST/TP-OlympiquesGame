@@ -25,5 +25,6 @@ require('./database/mongodb');
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Serveur lancé sur le port ${port} 🚀`);
+    console.log(`Cliquez sur le lien http://localhost:3000/api/sports/`);
 });
 
