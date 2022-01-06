@@ -13,6 +13,8 @@ app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 
 // Ajouter les routes via les routers
+const indexRouter = require('./routers/index.router');
+app.use('/api', indexRouter);
 const sportRouter = require('./routers/sport.router');
 app.use('/api', sportRouter);
 const athleteRouter = require('./routers/athlete.router');
@@ -25,6 +27,6 @@ require('./database/mongodb');
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Serveur lancé sur le port ${port} 🚀`);
-    console.log(`Cliquez sur le lien http://localhost:3000/api/sports/`);
+    console.log(`Cliquez sur le lien http://localhost:3000/api/index/`);
 });
 
