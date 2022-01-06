@@ -14,9 +14,8 @@ router.get('/sports/', async (req, res) => {
 router.post('/sports/', async (req, res) => {
 
     const body = req.body;
-    console.log(body);
+   
     const sport = new Sport({
-        id: uuidv4(),
         name: body.name,
         category: body.category
     });
