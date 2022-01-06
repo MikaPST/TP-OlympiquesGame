@@ -8,7 +8,6 @@ const sportSchema = new mongoose.Schema({
     name: String,
     category: String,
     athletes : [{ type: Schema.Types.ObjectId, ref: 'Athlete' }]
-
 });
 
 const Sport = mongoose.model('Sport', sportSchema);

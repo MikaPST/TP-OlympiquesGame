@@ -77,15 +77,15 @@
       <div class="row align-items-center">
         <div class="col">
           <h1>Ajout d'un Sport</h1>
-          <form action="/post-feedback" method="POST">
+          <form action="/api/sports" method="POST">
             <div class="form-row">
               <div class="col-md-4 mb-3">
                 <label for="validationDefault01">Nom du Sport :</label>
-                <input type="text" class="form-control" id="name" placeholder="Mangeur de Chocolat" required>
+                <input type="text" class="form-control" name="name" placeholder="Mangeur de Chocolat" required>
               </div>
               <div class="col-md-4 mb-3">
                 <label for="validationDefault02">Catégorie du Sport :</label>
-                <input type="text" class="form-control" id="category" placeholder="ex : Sport Individuel" required>
+                <input type="text" class="form-control" name="category" placeholder="ex : Sport Individuel" required>
               </div>
             </div>
             <div class="form-row">
