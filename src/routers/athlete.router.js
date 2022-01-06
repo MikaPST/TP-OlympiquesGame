@@ -19,11 +19,22 @@ router.get('/athletes/:athleteId/sport', async (req, res) => {
     //res.render('index'); //désactivé pour le moment voir comment faire pour render que si depuis browser
 });
 
+// router.post('/athletes/', async (req, res) => {
+//     const body = req.body;
+//     const athlete = new Athlete({ id: uuidv4(), firstName: body.firstName,
+//     lastName: body.lastName,gender: body.gender,country: body.country });
+//     console.log (athlete);
+//     athlete.save().then(() => res.send(athlete));
+// });
+
 router.post('/athletes/', async (req, res) => {
+
     const body = req.body;
-    const athlete = new Athlete({ id: uuidv4(), firstName: body.firstName,
-    lastName: body.lastName,gender: body.gender,country: body.country });
-    console.log (athlete);
+   
+    const athlete = new Athlete({
+        firstname: body.firstname,
+        category: body.category
+    });
     athlete.save().then(() => res.send(athlete));
 });
 
