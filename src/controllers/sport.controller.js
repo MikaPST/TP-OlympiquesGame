@@ -10,11 +10,12 @@ class SportController {
     }
 
     async athleteList(req, res) {
-        const sport = await Sport.findById(req.params.sportId);
-        res.json({
-            count: sport.athletes.length,
-            athletes: sport.athletes
-        })
+        const sports = await Sport.findById(req.params.sportId);
+        res.render('sport-athletes', { listSports: sports });
+        // res.json({
+        //     count: sport.athletes.length,
+        //     athletes: sport.athletes
+        // })
     }
 
     // ... A COMPLETER ...
