@@ -96,14 +96,18 @@
           </form>
         </div>
         <div class="col">
-          <h1>Liste des Sports</h1>
-          <form>
-            <div class="form-row">
-              <div class="col-md-4 mb-3">
+          <div class="row my-2">
+            <h1>Liste des Sports</h1>
+            <form action="/api/sports" method="GET">
+              <div class="form-row">
+                <div class="col-md-4 mb-3">
+                </div>
               </div>
-            </div>
-            <button class="btn btn-primary" type="submit" id="boutonGet" onclick="getListeSport()">Voir la
-              Liste</button>
+              <button class="btn btn-primary" type="submit">Voir la
+                Liste</button>
+            </form>
+          </div>
+
         </div>
       </div>
 
@@ -136,10 +140,10 @@
     <div class="container p-4">
       <!-- Section: Social media -->
       <section class="mb-4">
-        
+
         <!-- Github -->
         <a class="m-1" href="https://github.com/MikaPST/TP-OlympiquesGame.git">
-        <img src="https://imglink.io/ib/Dxc8h8SGHQ.png"  style="max-height : 80px" alt="Logo Github">
+          <img src="https://imglink.io/ib/Dxc8h8SGHQ.png" style="max-height : 80px" alt="Logo Github">
         </a>
 
       </section>
@@ -152,7 +156,7 @@
         </p>
       </section>
       <!-- Section: Text -->
-      
+
     </div>
     <!-- Grid container -->
 

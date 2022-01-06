@@ -7,6 +7,7 @@ const SportController = require('../controllers/sport.controller');
 const sportController = new SportController();
 
 router.get('/sports/', async (req, res) => {
+    console.log("CALLLED");
     // sportController.list(req,res);
     res.render('sport'); // désactivé pour le moment voir comment faire pour render que si depuis browser
 });
