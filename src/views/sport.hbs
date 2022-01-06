@@ -100,14 +100,13 @@
         <div class="col">
           <div class="row my-2">
             <h1>Liste des Sports</h1>
-            {{#each list}}
-            <div class="col-6 my-2">
+            {{#each listSports}}
+            <div class="col my-2">
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">{{name}}</h5>
-                  <p class="card-text">{{category}} {{_id}} </p>
-                  <a href="#" class="btn btn-primary">Liste des athlètes</a>
-                  <a href="#" class="btn btn-primary">Ajouter un athlète</a>
+                  <p class="card-text">Catégorie : {{category}} {{_id}} </p>
+                  <a href="/api/sports/{{_id}}/athletes" class="btn btn-primary">Athlètes</a>
                 </div>
               </div>
             </div>

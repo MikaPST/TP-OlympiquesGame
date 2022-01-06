@@ -7,16 +7,13 @@ const SportController = require('../controllers/sport.controller');
 const sportController = new SportController();
 
 router.get('/sports/', async (req, res) => {
-    console.log("CALLLED");
-    // sportController.list(req,res);
-    sportController.list(req,res);
-    // res.render('sport'); 
+    sportController.list(req, res);
 });
 
 router.post('/sports/', async (req, res) => {
 
     const body = req.body;
-   
+
     const sport = new Sport({
         name: body.name,
         category: body.category
@@ -26,7 +23,7 @@ router.post('/sports/', async (req, res) => {
 
 //Consulter les athlètes d'un sport : GET /api/sports/{sportId}/athletes
 router.get('/sports/:sportId/athletes', async (req, res) => {
-    sportController.athleteList(req,res);
+    sportController.athleteList(req, res);
     // res.send(req.params.sportId);
     //sportController.list(req,res);
     //res.render('index'); //désactivé pour le moment voir comment faire pour render que si depuis browser
