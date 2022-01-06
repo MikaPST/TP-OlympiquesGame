@@ -73,19 +73,27 @@
   <main class="flex-shrink-0" style="padding-top: 10em; padding-bottom: 10em;">
     <div class="container">
       {{!-- Titre --}}
-      <h1 style="color: white; font-size: 4em; text-align: center;">Bienvenue sur l'API Olympique Game !</h1>
+      <h1 style="color: white; font-size: 4em; text-align: center; margin-bottom: 1em;">Bienvenue sur l'API Olympique
+        Game !</h1>
       <div>
-        <p style="font-size: 20px; text-align: center;">Choisissez votre Catégorie pour utiliser l'API</p>
+        <p style="font-size: 20px; text-align: center; margin-bottom: 3em;">Choisissez votre Catégorie pour utiliser
+          l'API</p>
       </div>
 
-      <div class="row justify-content-start">
-        <div class="col">
-          <button class="btn btn-primary" type="submit" id="boutonGet" onclick="getListeSport()">Voir les Sports</button>
+      <div class="contenair">
+        <div class="row d-flex justify-content-center">
+          <button class="btn btn-primary col-2" style="margin-right: 8em" type="submit" id="boutonGet"
+            onclick="getListeSport()">Voir les Sports</button>
+            <button class="btn btn-primary col-2" style="margin-lef: 8em" type="submit" id="boutonGet"
+            onclick="getListeSport()">Voir les Athletes</button>
         </div>
-        <div class="col">
-          <button class="btn btn-primary" type="submit" id="boutonGet" onclick="getListeSport()">Voir les Athletes</button>
-        </div>
+        {{!-- <div class="row">
+          <button class="btn btn-primary col-5" style="margin-lef: 15px" type="submit" id="boutonGet"
+            onclick="getListeSport()">Voir les Athletes</button>
+        </div> --}}
+
       </div>
+    </div>
     </div>
   </main>
 
