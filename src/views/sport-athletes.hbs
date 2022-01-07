@@ -74,73 +74,58 @@
     <div class="container">
       {{!-- Mettre les ressources ici --}}
 
-      <div class="row justify-content-center" style="margin-bottom: 50px;">
-        <div class="col-4">
-          <h1>Ajout d'un Sport</h1>
-          <form action="/api/sports" method="POST">
-            <div class="form-row">
-              <div class="col-md-9 mb-3">
-                <label for="validationDefault01">Nom du Sport :</label>
-                <input type="text" class="form-control" name="name" placeholder="Mangeur de Chocolat" required>
-              </div>
-              <div class="col-md-9 mb-3">
-                <label for="validationDefault02">Catégorie du Sport :</label>
-                <input type="text" class="form-control" name="category" placeholder="ex : Sport Individuel" required>
-              </div>
-            </div>
-            <div class="form-row">
-            </div>
-            <div class="form-group">
-            </div>
-            <button class="btn btn-primary col-md-9" type="submit">Envoyer</button>
-          </form>
-        </div>
-      </div>
       <div class="row">
         <div class="col">
           <div class="row my-2">
-            <h1>Liste des Sports</h1>
-            {{#each listSports}}
-            <div class="col-3 my-2">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">{{name}}</h5>
-                  <p class="card-text">Catégorie : {{category}} {{_id}} </p>
-                  <a href="/api/sports/{{_id}}/athletes" class="btn btn-primary">Athlètes</a>
+            <h1>Liste des Athlètes</h1>
+            {{#if sport.athletes}}
+              {{#each sportAthletes}}
+              <div class="col-3 my-2">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">{{firstName}} {{lastName}}</h5>
+                    <p class="card-text">Pays : {{country}} </p>
+                    <p class="card-text">Sexe : {{gender}} </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            {{/each}}
+              {{/each}}
+            {{else}}
+              <h3>Aucun Athlète n'est renseigné pour ce sport !</h3>
+            {{/if}}
+
           </div>
         </div>
       </div>
-        
-      
-
       <div class="row">
 
+        <div class="row justify-content-center">
+          <div class="col-5">
+            <h1>Ajout d'un Athlète</h1>
+            <form onsubmit="loadSay('{{sport._id}}')">
+              <div class="form-row">
+                <div class="col-md- mb-3">
+                  <label for="inputAddAthlete">Athlete</label>
+                  <select id="inputAddAthlete" name="athlete" class="form-select">
+                    <option selected>Choisir un Athlète</option>
+                    {{#each listAthletes}}
+                    {{this}}
+                    <option value="{{this._id}}">{{this.firstName}}{{this.lastName}}({{this.country}})}</option>
+                    {{/each}}
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+              </div>
+              <div class="form-group">
+              </div>
+              <button class="btn btn-primary" type="submit">Envoyer</button>
+            </form>
+          </div>
+        </div>
+
 
       </div>
-
-      {{!-- <form>
-        <div class="form-row">
-          <div class="col-md-4 mb-3">
-            <label for="validationDefault01">Nom du Sport :</label>
-            <input type="text" class="form-control" id="nomGame" placeholder="Mangeur de Chocolat" required>
-          </div>
-          <div class="col-md-4 mb-3">
-            <label for="validationDefault02">Catégorie du Sport :</label>
-            <input type="text" class="form-control" id="validationDefault02" placeholder="ex : Sport Individuel"
-              required>
-          </div>
-        </div>
-        <div class="form-row">
-        </div>
-        <div class="form-group">
-        </div>
-        <button class="btn btn-primary" type="submit">Envoyer</button>
-      </form> --}}
-
 
     </div>
   </main>
@@ -181,6 +166,16 @@
 
 
   <script src="/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+
+   function loadSay(sportId){
+
+     console.log(document.getElementById("inputAddAthlete").value);
+
+    fetch('/api/sports/'+sportId+'/athletes/'+document.getElementById("inputAddAthlete").value)
+   }
+  </script>
 
 
 </body>

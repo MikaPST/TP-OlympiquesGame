@@ -1,4 +1,6 @@
 const Sport = require('../models/sport.model');
+const Athlete = require('../models/athlete.model');
+
 
 class SportController {
     /**
@@ -10,8 +12,11 @@ class SportController {
     }
 
     async athleteList(req, res) {
-        const sports = await Sport.findById(req.params.sportId);
-        res.render('sport-athletes', { listSports: sports });
+        const sport = await Sport.findById(req.params.sportId);
+        const sportAthletes = await Athlete.find().where('_id').in(sport.athletes).exec();
+        const athletes = await Athlete.find();
+
+        res.render('sport-athletes', { sport: sport, sportAthletes: sportAthletes, listAthletes: athletes });
         // res.json({
         //     count: sport.athletes.length,
         //     athletes: sport.athletes
