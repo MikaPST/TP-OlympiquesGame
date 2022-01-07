@@ -3,6 +3,8 @@
 
 API REST avec Node.js, Express et MongoDB
 
+![alt text](https://github.com/MikaPST/TP-OlympiquesGame/blob/main/public/assets/img/olympiqueGame.png?raw=true)
+
 ## Commencer
 
 Ce projet fonctionnera sur **NodeJs** en utilisant **MongoDB** comme base de données. 
