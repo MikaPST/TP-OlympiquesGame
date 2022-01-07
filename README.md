@@ -38,11 +38,14 @@ npm install
 
 1. Vous trouverez un fichier nommé `config.js.exemple` sur le répertoire racine du projet.
 2. Créez un nouveau fichier en copiant et en collant le fichier, puis en le renommant simplement « .env »
-    ```bash
-    cp config.js.exemple config.js
-    ```
+```bash
+cp config.js.exemple config.js
+```
 3. Le fichier `config.js` est déjà ignoré, vous ne validez donc jamais vos informations d'identification.
 4. Modifiez les valeurs du fichier dans votre environnement. Commentaires utiles ajoutés au fichier `config.js.exemple` pour comprendre les constantes.
+```bash
+host: "mongodb+srv://<utilisateur>:<mot_de_passe>@<name_bdd>.7iatl.mongodb.net/test?retryWrites=true&w=majority"
+ ```
 
 
 ## Comment Lancer
@@ -59,8 +62,7 @@ Vous saurez que le serveur est en cours d'exécution en vérifiant la sortie de 
 Serveur lancé sur le port 3000 🚀
 Connected to the database! ✅
 
-`Cliquez sur le lien ci-dessous`
-http://localhost:3000/api/sports/
+Cliquez sur le lien http://localhost:3000/api/index/
 
 Press CTRL + C to stop the process.
 ```
