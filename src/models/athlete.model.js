@@ -1,10 +1,8 @@
 'use strict';
 
 const mongoose = require('mongoose');
-// const Schema = mongoose.Schema;
 
 const athleteSchema = new mongoose.Schema({
-    // _id: String,
     firstName: String,
     lastName: String,
     gender: String,

@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const { v4: uuidv4 } = require('uuid');
 const Sport = require('../models/sport.model');
-
 const SportController = require('../controllers/sport.controller');
 const sportController = new SportController();
 
@@ -30,7 +29,5 @@ router.get('/sports/:sportId/athletes', async (req, res) => {
 router.post('/sports/:sportId/athletes/:athleteId', async (req, res) => {
     sportController.updateAthletes(req, res);
 });
-
-// ... A COMPLETER ...
 
 module.exports = router;

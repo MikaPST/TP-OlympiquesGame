@@ -1,6 +1,5 @@
 const Sport = require('../models/sport.model');
 const Athlete = require('../models/athlete.model');
-
 const ObjectId = require('mongoose').Types.ObjectId;
 
 class SportController {
@@ -18,10 +17,7 @@ class SportController {
         const athletes = await Athlete.find();
 
         res.render('sport-athletes', { sport: sport, sportAthletes: sportAthletes, listAthletes: athletes });
-        // res.json({
-        //     count: sport.athletes.length,
-        //     athletes: sport.athletes
-        // })
+
     }
 
     async updateAthletes(req, res) {
@@ -39,8 +35,6 @@ class SportController {
             }
         );
     }
-
-    // ... A COMPLETER ...
 }
 
 module.exports = SportController;

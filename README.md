@@ -66,7 +66,7 @@ Connected to the database! ✅
 
 Cliquez sur le lien http://localhost:3000/api/index/
 
-Press CTRL + C to stop the process.
+Appuyez sur CTRL + C pour arrêter le processus.
 ```
 
 Vous pouvez définir une commande personnalisée pour le test dans le fichier `package.json` dans la propriété `scripts`. Vous pouvez également modifier le délai d'attente pour chaque assertion avec le paramètre `--timeout` de la commande mocha.
