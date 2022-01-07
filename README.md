@@ -46,7 +46,7 @@ cp config.js.exemple config.js
 3. Le fichier `config.js` est déjà ignoré, vous ne validez donc jamais vos informations d'identification.
 4. Modifiez les valeurs du fichier dans votre environnement. Commentaires utiles ajoutés au fichier `config.js.exemple` pour comprendre les constantes.
 ```bash
-host: "mongodb+srv://<utilisateur>:<mot_de_passe>@<name_bdd>.7iatl.mongodb.net/test?retryWrites=true&w=majority"
+host: "mongodb+srv://<utilisateur>:<mot_de_passe>@<name_bdd>.<id_bdd>.mongodb.net/test?retryWrites=true&w=majority"
  ```
 
 
