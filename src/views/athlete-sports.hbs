@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.88.1">
+  <title>Olympique Game</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sticky-footer-navbar/">
+
+  <!-- Bootstrap core CSS -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="sticky-footer-navbar.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column h-100">
+
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Olympique Game</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="http://localhost:3000/api/index">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:3000/api/sports">Sports</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:3000/api/athletes">Athletes</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Begin page content -->
+  <main class="flex-shrink-0" style="padding-top: 10em; padding-bottom: 10em;">
+    <div class="container">
+      {{!-- Mettre les ressources ici --}}
+
+      <div class="row">
+        <div class="col">
+          <div class="row my-2">
+            <h1 style="text-align: center;">Liste des Sports de l'Athlète</h1>
+            {{#if sport.athletes}}
+            {{#each sportAthletes}}
+            <div class="col-3 my-2">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">{{firstName}} {{lastName}}</h5>
+                  <p class="card-text">Pays : {{country}} </p>
+                  <p class="card-text">Sexe : {{gender}} </p>
+                </div>
+              </div>
+            </div>
+            {{/each}}
+            {{else}}
+            <h5 style="text-align: center;"><i>Aucun Sport n'est renseigné pour cet athlète !</i></h5>
+            {{/if}}
+
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 30px;">
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+
+        <!-- Github -->
+        <a class="m-1" href="https://github.com/MikaPST/TP-OlympiquesGame.git">
+          <img src="https://imglink.io/ib/Dxc8h8SGHQ.png" style="max-height : 80px" alt="Logo Github">
+        </a>
+
+      </section>
+      <!-- Section: Social media -->
+
+      <!-- Section: Text -->
+      <section class="mb-4">
+        <p style="font-size: 20px;">
+          <strong>Rejoignez-nous sur Github !</strong>
+        </p>
+      </section>
+      <!-- Section: Text -->
+
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright - Timothée & Michaël
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+
+  <script src="/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function updateSportAthletes(sportId) {
+      fetch('/api/sports/' + sportId + '/athletes/' + document.getElementById("inputAddAthlete").value, { method: 'POST' })
+    }
+  </script>
+
+
+</body>
+
+</html>

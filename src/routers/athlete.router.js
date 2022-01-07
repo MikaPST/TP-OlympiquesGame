@@ -11,7 +11,8 @@ router.get('/athletes/', async (req, res) => {
 });
 
 router.get('/athletes/:athleteId/sports', async (req, res) => {
-    res.send(req.params.athleteId);
+    // res.send(req.params.athleteId);
+    res.render('athlete-sports');
 });
 
 router.post('/athletes/', async (req, res) => {
