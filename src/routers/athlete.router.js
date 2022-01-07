@@ -11,12 +11,11 @@ router.get('/athletes/', async (req, res) => {
 });
 
 router.get('/athletes/:athleteId/sports', async (req, res) => {
-    // res.send(req.params.athleteId);
-    res.render('athlete-sports');
+    athleteController.getAthleteSports(req,res);
 });
 
 router.post('/athletes/', async (req, res) => {
-
+    
     const body = req.body;
    
     const athlete = new Athlete({

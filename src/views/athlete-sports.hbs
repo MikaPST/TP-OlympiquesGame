@@ -72,14 +72,13 @@
         <div class="col">
           <div class="row my-2">
             <h1 style="text-align: center;">Liste des Sports de l'Athlète</h1>
-            {{#if sport.athletes}}
-            {{#each sportAthletes}}
+            {{#if listSports}}
+            {{#each listSports}}
             <div class="col-3 my-2">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">{{firstName}} {{lastName}}</h5>
-                  <p class="card-text">Pays : {{country}} </p>
-                  <p class="card-text">Sexe : {{gender}} </p>
+                  <h5 class="card-title">{{name}}</h5>
+                  <p class="card-text">Catégorie : {{category}} </p>
                 </div>
               </div>
             </div>
