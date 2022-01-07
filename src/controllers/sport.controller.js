@@ -33,7 +33,8 @@ class SportController {
                 if (err) {
                     res.send(err);
                 } else {
-                    res.send(result);
+                    res.status(200);
+                    res.redirect('back');
                 }
             }
         );

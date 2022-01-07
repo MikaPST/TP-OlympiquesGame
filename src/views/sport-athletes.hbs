@@ -79,19 +79,19 @@
           <div class="row my-2">
             <h1>Liste des Athlètes</h1>
             {{#if sport.athletes}}
-              {{#each sportAthletes}}
-              <div class="col-3 my-2">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">{{firstName}} {{lastName}}</h5>
-                    <p class="card-text">Pays : {{country}} </p>
-                    <p class="card-text">Sexe : {{gender}} </p>
-                  </div>
+            {{#each sportAthletes}}
+            <div class="col-3 my-2">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">{{firstName}} {{lastName}}</h5>
+                  <p class="card-text">Pays : {{country}} </p>
+                  <p class="card-text">Sexe : {{gender}} </p>
                 </div>
               </div>
-              {{/each}}
+            </div>
+            {{/each}}
             {{else}}
-              <h3>Aucun Athlète n'est renseigné pour ce sport !</h3>
+            <h3>Aucun Athlète n'est renseigné pour ce sport !</h3>
             {{/if}}
 
           </div>
@@ -102,7 +102,7 @@
         <div class="row justify-content-center">
           <div class="col-5">
             <h1>Ajout d'un Athlète</h1>
-            <form onsubmit="loadSay('{{sport._id}}')">
+            <form onsubmit="updateSportAthletes('{{sport._id}}')">
               <div class="form-row">
                 <div class="col-md- mb-3">
                   <label for="inputAddAthlete">Athlete</label>
@@ -168,11 +168,9 @@
   <script src="/js/bootstrap.bundle.min.js"></script>
 
   <script>
-
-   function loadSay(sportId){
-
-    fetch('/api/sports/'+sportId+'/athletes/'+document.getElementById("inputAddAthlete").value, {method:'POST'})
-   }
+    function updateSportAthletes(sportId) {
+      fetch('/api/sports/' + sportId + '/athletes/' + document.getElementById("inputAddAthlete").value, { method: 'POST' })
+    }
   </script>
 
 
