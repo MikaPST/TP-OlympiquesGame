@@ -1,6 +1,7 @@
 const Sport = require('../models/sport.model');
 const Athlete = require('../models/athlete.model');
 
+const ObjectId = require('mongoose').Types.ObjectId;
 
 class SportController {
     /**
@@ -21,6 +22,21 @@ class SportController {
         //     count: sport.athletes.length,
         //     athletes: sport.athletes
         // })
+    }
+
+    async updateAthletes(req, res) {
+
+        Sport.updateOne(
+            { _id: new ObjectId(req.params.sportId) },
+            { $addToSet: { athletes: new ObjectId(req.params.athleteId) } },
+            function (err, result) {
+                if (err) {
+                    res.send(err);
+                } else {
+                    res.send(result);
+                }
+            }
+        );
     }
 
     // ... A COMPLETER ...

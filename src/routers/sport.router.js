@@ -31,7 +31,9 @@ router.get('/sports/:sportId/athletes', async (req, res) => {
 
 //Ajouter un athlète dans un sport : POST /api/sports/{sportId}/athletes/{athleteId}
 router.post('/sports/:sportId/athletes/:athleteId', async (req, res) => {
-    res.send(req.params);
+
+    sportController.updateAthletes(req,res);
+    // res.send(req.params);
     // const body = req.body;
     // const sport = new Sport({ id: uuidv4(), name: body.name, category: body.category });
     // sport.save().then(() => res.send(sport));

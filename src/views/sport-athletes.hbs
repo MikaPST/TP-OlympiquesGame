@@ -171,9 +171,7 @@
 
    function loadSay(sportId){
 
-     console.log(document.getElementById("inputAddAthlete").value);
-
-    fetch('/api/sports/'+sportId+'/athletes/'+document.getElementById("inputAddAthlete").value)
+    fetch('/api/sports/'+sportId+'/athletes/'+document.getElementById("inputAddAthlete").value, {method:'POST'})
    }
   </script>
 
