@@ -29,6 +29,7 @@ router.post('/athletes/', async (req, res) => {
         country: body.country
     });
     athlete.save().then(() => res.send(athlete));
+    return res.redirect('back');
 });
 
 // ... A COMPLETER ...
