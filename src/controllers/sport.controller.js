@@ -12,12 +12,21 @@ class SportController {
     }
 
     async athleteList(req, res) {
-        const sport = await Sport.findById(req.params.sportId);
-        const sportAthletes = await Athlete.find().where('_id').in(sport.athletes).exec();
-        const athletes = await Athlete.find();
+
+        let sport;
+        let sportAthletes;
+        let athletes;
+
+        try {
+            sport = await Sport.findById(req.params.sportId);
+            sportAthletes = await Athlete.find().where('_id').in(sport.athletes).exec();
+            athletes = await Athlete.find();
+        }
+        catch (e) {
+            console.log("Erreur lors de la récupération des informations")
+        }
 
         res.render('sport-athletes', { sport: sport, sportAthletes: sportAthletes, listAthletes: athletes });
-
     }
 
     async updateAthletes(req, res) {
@@ -25,7 +34,7 @@ class SportController {
         Sport.updateOne(
             { _id: new ObjectId(req.params.sportId) },
             { $addToSet: { athletes: new ObjectId(req.params.athleteId) } },
-            function (err, result) {
+            function (err, res) {
                 if (err) {
                     res.send(err);
                 } else {
