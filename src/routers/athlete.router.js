@@ -24,7 +24,7 @@ router.post('/athletes/', async (req, res) => {
         gender: body.genre,
         country: body.country
     });
-    athlete.save().then(() => res.redirect(200,'back'));
+    athlete.save().then(() => res.redirect('back'));
     
 });
 
