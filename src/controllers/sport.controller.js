@@ -34,7 +34,7 @@ class SportController {
         Sport.updateOne(
             { _id: new ObjectId(req.params.sportId) },
             { $addToSet: { athletes: new ObjectId(req.params.athleteId) } },
-            function (err, res) {
+            function (err, resultat) {
                 if (err) {
                     res.send(err);
                 } else {
