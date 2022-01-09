@@ -15,7 +15,8 @@ router.post('/sports/', async (req, res) => {
 
     const sport = new Sport({
         name: body.name,
-        category: body.category
+        category: body.category,
+        athletes: Array()
     });
     sport.save().then(() => res.redirect('back'));
 });
