@@ -17,7 +17,7 @@ router.post('/sports/', async (req, res) => {
         name: body.name,
         category: body.category
     });
-    sport.save().then(() => res.redirect(200,'back'));
+    sport.save().then(() => res.redirect('back'));
 });
 
 //Consulter les athlètes d'un sport : GET /api/sports/{sportId}/athletes

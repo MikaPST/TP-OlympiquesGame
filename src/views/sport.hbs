@@ -94,17 +94,21 @@
         <div class="col">
           <div class="row my-2">
             <h1>Liste des Sports</h1>
-            {{#each listSports}}
-            <div class="col-3 my-2">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">{{name}}</h5>
-                  <p class="card-text">Catégorie : {{category}} </p>
-                  <a href="/api/sports/{{_id}}/athletes" class="btn btn-primary">Athlètes</a>
+            {{#if listSports}}
+              {{#each listSports}}
+              <div class="col-3 my-2">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">{{name}}</h5>
+                    <p class="card-text">Catégorie : {{category}} </p>
+                    <a href="/api/sports/{{_id}}/athletes" class="btn btn-primary">Athlètes</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            {{/each}}
+              {{/each}}
+              {{else}}
+              <h5 style="text-align: center;"><i>Aucun Sport n'est renseigné pour le moment !</i></h5>
+            {{/if}}
           </div>
         </div>
       </div>
