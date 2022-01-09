@@ -15,7 +15,7 @@
     "jeux",
     "olympiques"
   ],
-  "author": "Christophe Bouvard",
+  "author": "tim38 & MikaPST",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
