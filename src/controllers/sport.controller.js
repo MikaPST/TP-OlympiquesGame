@@ -12,12 +12,17 @@ class SportController {
     }
 
     async athleteList(req, res) {
-        const sport = await Sport.findById(req.params.sportId);
-        const sportAthletes = await Athlete.find().where('_id').in(sport.athletes).exec();
-        const athletes = await Athlete.find();
 
+        try{
+            const sport = await Sport.findById(req.params.sportId);
+            const sportAthletes = await Athlete.find().where('_id').in(sport.athletes).exec();
+            const athletes = await Athlete.find();
+        }
+        catch(e){
+            console.log("Erreur lors de la récupération des informations")
+        }
+    
         res.render('sport-athletes', { sport: sport, sportAthletes: sportAthletes, listAthletes: athletes });
-
     }
 
     async updateAthletes(req, res) {
